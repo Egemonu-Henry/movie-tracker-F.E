@@ -18,7 +18,7 @@ const Register = ({setUser}) => {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         try {
-        const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/user/login`, formData);
+        const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/user/register`, formData);
 
     if (res.status === 201 && res.data.success) {
       localStorage.setItem("token", res.data.token);
